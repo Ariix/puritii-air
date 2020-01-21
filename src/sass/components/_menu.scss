@@ -1,0 +1,102 @@
+div.menu {
+  position: fixed;
+  background: #00bfd8 0% 0% no-repeat padding-box;
+  top: 0;
+  width: 100%;
+  color: white;
+  margin: 0;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+  z-index: 999999;
+  // box-shadow: 0 7px 10px -6px grey;
+  opacity: 0;
+
+  div.item-wrap {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  .item1,
+  .item2 {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 40px;
+
+    text-align: right;
+    margin-right: 10px;
+    align-self: flex-end;
+
+    &:not(last-child) {
+      margin-right: 45px;
+    }
+  }
+
+  div.item1::before {
+    border-radius: 1em;
+    border-top: 0.1em solid white;
+    content: "";
+    position: absolute;
+    right: 80%;
+    top: -0.9em;
+    left: 0;
+    transition: right 0.4s cubic-bezier(0, 0.5, 0, 1),
+      border-color 0.4s ease-out;
+  }
+
+  div.item1:hover::before {
+    right: 0;
+  }
+
+  div.item2::before {
+    border-radius: 1em;
+    border-top: 0.1em solid white;
+    content: "";
+    position: absolute;
+    right: 80%;
+    top: -0.9em;
+    left: 0;
+    transition: right 0.4s cubic-bezier(0, 0.5, 0, 1),
+      border-color 0.4s ease-out;
+  }
+
+  div.item2:hover::before {
+    right: 0;
+  }
+}
+
+img.logo {
+  text-align: left;
+  width: 190px;
+  color: white;
+}
+
+svg {
+  width: 185px;
+  fill: white;
+}
+
+.logo {
+  width: 190px;
+  color: white;
+}
+.orange {
+  position: relative;
+  margin-top: 8.9rem;
+  text-align: center;
+  height: 50px;
+  padding-top: 1.4rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #ff9000;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

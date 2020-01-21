@@ -1,0 +1,46 @@
+@mixin grid($colSpan, $gridColumns: 12, $margin: 1%) {
+  $unitWidth: $gridColumns / $colSpan;
+  float: left;
+  width: (100 - $unitWidth * $margin) / $unitWidth;
+  margin: 0 $margin/2;
+}
+
+// css grid. We already have a grid. No need to create the above...
+
+// .project {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+//   grid-gap: 1em;
+// }
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1em;
+}
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1em;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-template-rows: 85% auto;
+  grid-template-areas: "sidebar main" "sidebar footer";
+}

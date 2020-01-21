@@ -1,0 +1,31 @@
+img {
+    max-width: 100%;
+}
+
+.blox {
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: auto;
+    border: 1px red solid;
+
+    padding: 5px;
+
+
+}
+
+.blox>div {
+    flex: 1 1 auto;
+    // border: 1px red solid;
+    text-align: center;
+
+    margin: 5px;
+    /* and that, will result in a 10px gap */
+
+}
+
+.words {
+    position: relative;
+
+}

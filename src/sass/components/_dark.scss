@@ -1,0 +1,94 @@
+.dark-bg {
+  position: relative;
+
+  height: 100vh;
+  background: url(../../images/air-bg.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  -webkit-perspective: 100px;
+
+  perspective: 100px;
+}
+
+.dark-title {
+  margin: 0 auto;
+}
+
+.filter-house {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 47rem;
+  max-width: 85%;
+  margin: 0 auto;
+  clip-path: polygon(3% 0%, -3% 100%, 100% 100%, 100% 10%, 65% 1%);
+  z-index: 15;
+}
+
+.dark-bg:before {
+  -webkit-animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  //   url(../images/background.png) no-repeat bottom;
+  // background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)),
+  //   url(../images/background.png) no-repeat bottom;
+  // background-size: cover;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.dark-bg:after {
+  -webkit-animation: rotate-up 0.5s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  animation: rotate-up 0.5s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  content: "";
+  height: 40rem;
+  //   left: -5%;
+  position: absolute;
+  //   right: -5%;
+  top: 90%;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  z-index: 0;
+}
+
+.shadowFilter {
+  position: absolute;
+  top: -648px;
+  left: -95px;
+  width: 192%;
+}
+.topShadow {
+  height: 68%;
+}
+
+.shadowFade {
+  position: absolute;
+  top: 0px;
+  left: 0;
+
+  background: -webkit-linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1)
+  );
+  content: "";
+  width: 100vw;
+  height: 150rem;
+  z-index: 9;
+}
+
+.light {
+  position: relative;
+  overflow: hidden;
+}

@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Menu from "./components/Menu";
+import Rebate from "./components/rebate";
+import Dark from "./components/DarkFilter";
+import Light from "./components/LightFilter";
+import Couch from "./components/CouchFilter";
+import Hepa from "./components/HepaFilter";
+import Kid from "./components/KidFilter";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Menu></Menu>
+      <Rebate></Rebate>
+      <Dark></Dark>
+      <Light></Light>
+      <Couch></Couch>
+      <Hepa></Hepa>
+      <Kid></Kid>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }
