@@ -584,6 +584,36 @@ svg {
   left: 0;
 }
 
+.fly-menu {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  background-color: #00bfd8;
+  text-align: center;
+  width: 90vw;
+  height: 90vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.fly-menu ul {
+  padding: 0;
+  margin-top: 7rem;
+}
+
+.fly-menu li {
+  list-style: none;
+  font-size: 5rem;
+}
+
+.fly-menu-inner {
+  text-align: left;
+}
+
 .js-loading *,
 .js-loading *:before,
 js-loading *:after {
@@ -1148,10 +1178,12 @@ img {
 
 .blue-sky {
   position: relative;
-  width: 100vw;
-  height: 1440px;
-  background: -webkit-linear-gradient(bottom, rgba(255, 200, 250, 0), rgba(0, 0, 0, 0.7)), url(../../images/blu_sky.png) no-repeat center center fixed;
+  background-image: url("../../images/blu_sky.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
   background-size: cover;
+  height: 100vh;
 }
 
 .dark-bg {
@@ -1212,9 +1244,10 @@ img {
 
 .shadowFilter {
   position: absolute;
-  top: -648px;
-  left: -95px;
-  width: 192%;
+  top: -124px;
+  left: -129px;
+  height: 220%;
+  width: 190%;
 }
 
 .topShadow {
@@ -2585,5 +2618,30 @@ img {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+
+.blu {
+  position: relative;
+  width: 100vw;
+  height: 1440px;
+}
+
+.blue-sky {
+  position: relative;
+  background-image: url("../../images/blu_sky.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.kidFilter {
+  position: relative;
+  background-image: url("../../images/kid.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
+  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */

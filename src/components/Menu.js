@@ -13,6 +13,14 @@ export default function Menu() {
           <span className="hamburger-inner"></span>
         </span>
       </button>
+
+      <div className="fly-menu">
+        <ul>
+          <li>Overview</li>
+          <li>Study</li>
+          <li>Tech Specs</li>
+        </ul>
+      </div>
     </div>
   );
 }

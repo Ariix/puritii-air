@@ -4,14 +4,21 @@
   height: 1440px;
 }
 .blue-sky {
+  // position: relative;
+  // width: 100vw;
+  // height: 1440px;
+  // background: -webkit-linear-gradient(
+  //     bottom,
+  //     rgba(255, 200, 250, 0),
+  //     rgba(0, 0, 0, 0.7)
+  //   ),
+  //   url(../../images/blu_sky.png) no-repeat center center fixed;
+  // background-size: cover;
   position: relative;
-  width: 100vw;
-  height: 1440px;
-  background: -webkit-linear-gradient(
-      bottom,
-      rgba(255, 200, 250, 0),
-      rgba(0, 0, 0, 0.7)
-    ),
-    url(../../images/blu_sky.png) no-repeat center center fixed;
+  background-image: url("../../images/blu_sky.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: center center;
   background-size: cover;
+  height: 100vh;
 }

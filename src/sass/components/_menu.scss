@@ -100,3 +100,55 @@ svg {
   top: 0;
   left: 0;
 }
+
+.fly-menu {
+  position: absolute;
+  top: 83px;
+  right: 0;
+  background-color: #00bfd8;
+  text-align: center;
+  width: 90vw;
+  height: 90vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  ul {
+    padding: 0;
+    margin-top: 7rem;
+  }
+
+  li {
+    list-style: none;
+    font-size: 5rem;
+  }
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.fly-menu {
+  opacity: 0;
+}
+
+.show-menu {
+  animation: showMenu 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+}
+
+.fly-menu-inner {
+  text-align: left;
+}
+
+// menu animations
+@keyframes showMenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-4rem) scale(0.8);
+    transform: translateY(-4rem) scale(0.8);
+  }
+
+  100% {
+    opacity: 0.9;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

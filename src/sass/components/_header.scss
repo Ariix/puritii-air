@@ -3,6 +3,9 @@
 js-loading *:after {
   animation-play-state: paused !important;
 }
+html {
+  scroll-behavior: smooth;
+}
 h3 {
   margin: 0;
 }

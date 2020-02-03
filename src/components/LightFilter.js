@@ -6,7 +6,7 @@ export default function LightFilter() {
   return (
     <div className="light">
       <ShadowFade></ShadowFade>
-      <img src={lightFilter} alt="" />
+      <div className="blue-sky"></div>
     </div>
   );
 }
