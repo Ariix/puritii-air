@@ -81,14 +81,16 @@ svg {
 }
 
 .logo {
-  width: 190px;
+  width: 230px;
   color: white;
+  position: relative;
 }
 .orange {
   position: relative;
   margin-top: 8.9rem;
   text-align: center;
   height: 50px;
+  letter-spacing: 1rem;
   padding-top: 1.4rem;
   text-transform: uppercase;
   color: white;
@@ -136,6 +138,15 @@ svg {
 
 .fly-menu-inner {
   text-align: left;
+}
+.menu-title {
+  text-transform: uppercase;
+  width: 160px;
+  line-height: 2rem;
+  text-align: left;
+  top: 20px;
+  left: 240px;
+  position: absolute;
 }
 
 // menu animations

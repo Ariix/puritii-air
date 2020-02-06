@@ -6,6 +6,7 @@ export default function Menu() {
     <div className="menu animate-menu">
       <span className="logo">
         <Logo></Logo>
+        <span className="menu-title">Where nothing means everything.</span>
       </span>
 
       <button className="hamburger hamburger--spin" type="button">
