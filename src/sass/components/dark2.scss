@@ -1,0 +1,48 @@
+.dark-bg2 {
+  background-color: black;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  margin-top: -3px;
+}
+.dots2 {
+    z-index: 999;
+    right:3vw;
+    position: absolute;
+    bottom: -50vh;
+    width: 30%;
+    opacity: 0;
+    transition: opacity 2s;
+  }
+.text {
+  padding: 1rem;
+  width: 50vw;
+  max-width: 120rem;
+  opacity:0;
+  transition: opacity 1s;
+}
+
+//animation
+.active .text, .active .dots2 {
+    opacity:1;
+}
+  
+  @media (max-width:1024px){
+    .dots2{
+      width:60%;
+      right: -30%;
+      bottom: -150%;
+    }
+    .text {
+      width: 70%;
+    }
+  
+  }
+  @media (max-width:768px) {
+    .text {
+      width: 100%;
+    }
+  }

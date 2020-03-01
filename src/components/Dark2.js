@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import TopFilter from "./items/TopFilter";
-import Headline from "./items/Headline";
 
-class DarkFilter extends Component {
+class Dark2 extends Component {
   selector;
   IntersectionObserver;
 
@@ -14,13 +12,12 @@ class DarkFilter extends Component {
     };
   }
 
-  
   componentDidMount = () => {
     var x = this.selector.current;
     let options = {
       root: this.x,
-      rootMargin: "0px",
-      threshold: .7
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 1
     };
     this.observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -36,18 +33,19 @@ class DarkFilter extends Component {
   componentWillUnmount() {
     this.observer.disconnect();
   }
+  
 
   render(){
+    const text = require('../images/white-yellow-blue-text.png');
     const dots = require('../images/dots.svg');
     return (
-      <div className="dark-bg" ref={this.selector}>
-        <Headline></Headline>
-        <TopFilter></TopFilter>
-        <img  className="dots1 gRellax" src={dots} alt="" data-rellax-speed="-7"/>
-        
+      <div className="dark-bg2" ref={this.selector}>
+        <img alt="" src={text} className="text gRellax" data-rellax-speed="6"/>
+        <img  className="dots2 gRellax" src={dots} alt="" data-rellax-speed="-5"/>
       </div>
     );
   }
+
 }
 
-export default DarkFilter;
+export default Dark2;

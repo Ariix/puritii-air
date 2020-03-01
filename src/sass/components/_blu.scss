@@ -1,24 +1,133 @@
-.blu {
-  position: relative;
-  width: 100vw;
-  height: 1440px;
-}
 .blue-sky {
-  // position: relative;
-  // width: 100vw;
-  // height: 1440px;
-  // background: -webkit-linear-gradient(
-  //     bottom,
-  //     rgba(255, 200, 250, 0),
-  //     rgba(0, 0, 0, 0.7)
-  //   ),
-  //   url(../../images/blu_sky.png) no-repeat center center fixed;
-  // background-size: cover;
   position: relative;
+  height: 100vh;
+  min-height: 700px;
   background-image: url("../../images/blu_sky.png");
   background-repeat: no-repeat;
   overflow: hidden;
-  background-position: center center;
+  background-position: center bottom;
+  margin:-3rem;
   background-size: cover;
-  height: 100vh;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transition: opacity 1.5s;
+  }
+  .title {
+    margin: 0 auto;
+  }
+
+  h2  {
+    color:white;
+    font-size:3.5rem;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-top:0;
+  }
 }
+
+.active.blue-sky::after {
+  opacity: 0;
+}
+
+.shade{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 10vh;
+    background: linear-gradient(black, transparent);
+    z-index: 1;
+    transition: 1.5s transform ease-in-out;
+    transition-delay: .5s;
+  }
+  .active .shade {
+    transform: translateY(-20vh);
+  }
+.light-filter-text {
+  position: absolute;
+  z-index: 99;
+  left:0;
+  right: 0;
+  top:20%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 120rem;
+  opacity: 0;
+  transition: 750ms top ease-in-out, 1s opacity;
+  .title-small {
+    display: none;
+  }
+}
+.delay {
+  transition-delay: 200ms;
+}
+.five-points{
+  position: absolute;
+  z-index: 99;
+  bottom:10%;
+  right:0;
+  left:0;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 5rem;
+}
+.five-points-small {
+  display: none;
+}
+.active .light-filter-text {
+  top: 8vh;
+  opacity: 1;
+}
+
+
+@media (max-width:1200px){
+  .light-filter-text {
+    width: 70vw;
+    .title-large {display:none;}
+    .title-small {display:block;}
+  }
+  .title {
+    max-width: 80%;
+  }
+  .blue-sky {
+    background-position: bottom right 85%;
+  }
+}
+@media (max-width:767px){
+  .light-filter-text {
+    width:80%;
+    top: 30%;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+  .five-points {display:none;}
+  .five-points-small {
+    display: block;
+    position: absolute;
+  }
+  .blue-sky {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+  .active .light-filter-text {
+    top:20%;
+  }
+  .active .five-points-small {
+    bottom:45%;
+  }
+
+}
+
+

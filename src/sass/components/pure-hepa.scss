@@ -1,0 +1,231 @@
+$orange: #ff9016;
+.pure-hepa {
+    height: 70vh;
+    min-height: 50rem;
+    max-height: 40vw;
+    background-color: white;
+    display: flex;
+    z-index: 0;
+    color:#616161;
+    .left, .right {
+        position: relative;
+    }
+    .right {
+        width:50%;
+    }
+    .left{
+        width:50%;
+    }
+    // Left Section
+    .filter-graphic, .filter-layer {
+    position: absolute;
+    right:3vw;
+    z-index: 10;
+    width: 32vw;
+    min-width: 45rem;
+    opacity:0;
+    transition: 1s opacity;
+    }
+    .filter-layer {top:-10rem;z-index: 3;}
+    .filter-graphic {bottom:-10rem;z-index: 2;}
+
+    .grey.dots{
+        filter: invert(50%);
+        z-index: 2;
+        position: absolute;
+        max-width: 30vw;
+        left:-8vw;
+        bottom:0;
+        z-index: 0;
+    }
+    .square {
+        width: 40vw;
+        height:40vw;
+        transform:rotate(45deg);
+        margin:0;
+     }
+     .orange {
+         background-color: $orange;
+         position: absolute;
+         bottom:-30vw;
+         left:-10vw;
+         z-index: 0;
+     }
+
+     // Right Section
+     .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5rem;
+     }
+     .title {
+         max-width: 30rem;
+         margin-top: 5rem;
+     }
+     .blue-square-wrap {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+     }
+     .blue {
+        background-color: #00bfd8;
+        margin-top:-30vw;
+        margin-right:-20vw;
+        z-index: 1;
+     }
+    p { margin-top:0;
+        font-size: 1.75rem;
+        max-width: 80%;
+        letter-spacing: 4px;
+    }
+    .view-test{
+        color:$orange;
+        font-size: 2rem;
+        margin:1rem 0;
+        font-weight: bold;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: center;
+    }
+    img.chain {
+        margin: 0 1rem 0 0 ;
+    }
+     
+}
+.circles {
+    max-width: 80%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    img {
+        transition: 1s transform;
+        transform: translateX(-100vw) rotate(-720deg);
+        max-width: 8vw;
+    }
+    .circle1 {
+        transition-delay: 1000ms;
+    }
+    .circle2 {
+        transition-delay: 1100ms;
+    }
+    .circle3 {
+        transition-delay: 1200ms;
+    }
+    .circle4 {
+        transition-delay: 1300ms;
+    }
+}
+.active {
+    .filter-layer {top:-10rem; animation: filter 4s ease-in-out forwards 1s infinite; z-index: 3;}
+    .circles img{
+        transform: translateX(0) rotate(0);
+     }
+     .filter-graphic, .filter-layer {
+         opacity: 1;
+     }
+}
+//Animations
+@keyframes filter {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width:992px){
+    .pure-hepa {
+        height: calc(100vh - 90px);
+        max-height:  calc(100vh - 90px);
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .right {
+            .title {
+                max-width: 30rem;
+                height: auto;
+                width: 100%;
+            }
+        }
+        .grey.dots {
+            max-width: 35rem;
+            bottom: 50%;
+        }
+        .filter-wrap {
+            position: relative;
+            height: 45rem;
+            width: 100%;
+        }
+        .filter-layer, .filter-graphic{
+            min-width: unset;
+        }
+        .filter-layer {
+            top:0;
+        }
+        .filter-graphic {
+            bottom: 0;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+    }     
+}
+@media (max-width:767px){
+    .pure-hepa {
+        overflow: hidden;
+        min-height: 60rem;
+        .left {
+            width:40%;
+        }
+        .right {
+            width:60%;
+            padding:1rem;
+        }
+        .grey.dots {
+            left: -17rem;
+        }
+        .filter-wrap{
+            height: 45rem;
+            width: 30rem;
+            margin-left: -15rem;
+        }
+        .filter-layer, .filter-graphic{
+            height: auto;
+            min-width: 100%;
+        }
+        p {
+            max-width: 95%;
+           font-size: 1.25rem;
+           letter-spacing: 2px;
+        }
+        .circles {
+            max-width: 60%;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            
+            img {
+                max-width: 50%;
+            }
+        }
+        .view-test {
+            font-size: 1rem;
+        }
+    }
+}
+
+
+
+
+

@@ -1,9 +1,113 @@
 .kidFilter {
   position: relative;
-  background-image: url("../../images/kid.png");
-  background-repeat: no-repeat;
+  height: calc(100vh - 90px);
+  min-height: 600px;
+  color:#616161;
   overflow: hidden;
-  background-size: cover;
-  background-position: center center;
-  height: 100vh;
+  z-index: 0;
+  &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url("../../images/kid.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      filter: blur(30px);
+      transition: filter 3s;
+      animation: baby 40s ease-in-out forwards infinite;
+      animation-delay: 3s;
+  }
+  .white-grad{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 30vh;
+    background-image: linear-gradient(white, transparent);
+    margin: 0;
+  }
+  .filter-small, .title-small {
+    display: none;
+  }
+  .kid-filter-wrap {
+    position: absolute;
+    right: -20%;
+    bottom: 0;
+    max-height: 90%;
+    max-width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .kid-text-area {
+    position: absolute;
+    top:10%;
+    left:5%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+    max-width: 50%;
+    .circle-34 {float:right;}
+    .title-large {
+      width: 40%;
+    }
+    p {
+      font-size: 1.2vw;
+      letter-spacing: 4px;
+    }
+  }
+  
+}
+
+//animation
+.active.kidFilter {
+  &::after {
+    filter: blur(0);
+  }
+} 
+@keyframes baby {
+  50% {
+     transform:scale(1.2) translate(-2%, -2%);
+  }
+}
+
+@media (max-width:1200px){
+  .kidFilter {
+    background-position: bottom right 25%;
+    .kid-text-area{
+      max-width: 90%;
+      left: 1rem;
+      right:1rem;
+      grid-template-columns: 1fr 3fr;
+      .title-small {
+        display:block;
+        width:50%;
+      }
+      p {
+        font-size:1.75rem;
+      }
+    }
+    .kid-filter-wrap{
+      position: absolute;
+      bottom: 0;
+      right: -25%;
+      max-width: 80%;
+    }
+    .filter-large, .title-large {
+      display: none;
+    }
+    .filter-small {
+      display:block;
+    }
+  }
+}
+@media (max-width:992px){
+  .white-grad{
+    height: 50vh;
+  }
 }

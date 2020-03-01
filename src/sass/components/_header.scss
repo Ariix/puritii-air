@@ -13,7 +13,6 @@ h3 {
   display: inline-block;
   color: white;
   margin-bottom: 1rem;
-  padding-left: 2rem;
 }
 
 header {
@@ -267,12 +266,15 @@ header:after {
 }
 
 .headline {
-  position: relative;
   width: 650px;
   max-width: 90%;
   margin: 0 auto;
-  padding: 10rem 0 10rem;
-  z-index: 1000000;
+  z-index: 16;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 10rem;
 }
 
 .r2d2 {
@@ -293,6 +295,9 @@ header:after {
     position: relative;
     margin: 0;
     top: -1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 0.5rem;
   }
 }
 .play-btn {
@@ -480,5 +485,15 @@ header:after {
   100% {
     -webkit-transform: rotateZ(-4deg);
     transform: rotateZ(-4deg);
+  }
+}
+
+@media (max-width: 1024px){
+  .headline{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: -10rem;
   }
 }

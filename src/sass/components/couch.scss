@@ -1,0 +1,113 @@
+.couch-section {
+    position: relative;
+    height: 130vh;
+    min-height: 700px;
+    background-color: #ededed;
+    overflow: hidden;
+    .couch-and-machine, .arrows {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: cover;
+    }
+    .couch-and-machine {
+        background-image: url(../../images/couch.jpg);
+        z-index: 1;
+    }
+    .arrows {
+        background-image: url(../../images/air-flow.png);
+        z-index: 2;
+        opacity:0;
+        transition: opacity 1s;
+    }
+
+}
+.couch-section.active .arrows {
+    opacity:1;
+}
+
+.couch-text-area {
+    color:#616161;
+    letter-spacing: 3px;
+    z-index: 3;
+    position: absolute;
+    width: 42%;
+    bottom:60%;
+    left: 3%;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1.5rem;
+    opacity:0;
+    transition: opacity 1s;
+    > img {
+        max-width: 15rem;
+        transform: rotate(360deg);
+        transition: 1s transform 500ms;
+    }
+    .title {
+        max-width: 45rem;
+    }
+    p {
+        font-size: 1.5vw;
+        margin-top:0.5rem;
+        transform:translateY(10vw);
+        opacity:0;
+        transition: transform 1s, opacity 500ms;
+    }
+}
+.active {
+    .couch-text-area {
+        opacity: 1;
+        > img {
+            transform: rotate(0deg);
+        }
+    }
+    .couch-text-area p{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width:1500px){
+
+    .couch-text-area {
+        width: 70%;
+        top:10%;
+        > img {
+            max-width: 10rem;
+        }
+        p {font-size: 1.9rem;}
+    }
+
+}
+
+@media (max-width:992px){
+    .couch-text-area {
+        width: 90%;
+        .title {
+            max-width: 20rem;
+        }
+    }
+
+}
+
+@media (max-width:767px) {
+    .couch-and-machine, .arrows {
+        background-position: 70%!important;
+    }
+    .couch-text-area {
+        bottom: auto;
+        top:5%;
+        > img {
+            max-width: 7rem;
+        }
+        p {
+            font-size: 1.3rem;
+        }
+    }
+}

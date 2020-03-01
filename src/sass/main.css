@@ -64,19 +64,7 @@ html {
 }
 
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-@font-face {
-  font-family: "National";
-  font-style: normal;
-  font-weight: 400;
-  src: "../fonts/national-regular.otf";
-}
 
-body {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 100%;
-  font-family: "National-Regular";
-}
 
 article,
 aside,
@@ -629,7 +617,6 @@ h3 {
   display: inline-block;
   color: white;
   margin-bottom: 1rem;
-  padding-left: 2rem;
 }
 
 header {

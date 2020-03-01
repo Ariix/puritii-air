@@ -4,21 +4,6 @@ $teal: #00c1d5;
 $orange: #ff8f1c;
 $darkblue: #557288;
 
-@font-face {
-  font-family: "National";
-  font-style: normal;
-  font-weight: 400;
-  src: ("../fonts/national-regular.otf");
-}
-
-body {
-  margin: 0 auto;
-  padding: 0;
-
-  max-width: 100%;
-  font-family: "National-Regular";
-}
-
 article,
 aside,
 footer,
@@ -30,6 +15,13 @@ figure,
 main {
   display: block;
 }
+
+
+#root {
+  width: 100%;
+  overflow: hidden;
+}
+
 
 figure {
   margin: 1em 40px;
@@ -104,7 +96,6 @@ main {
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: 400;
   src: local("Open Sans"), local("OpenSans"),
     url(https://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff)
       format("woff");
@@ -113,7 +104,6 @@ main {
 @font-face {
   font-family: "Open Sans";
   font-style: normal;
-  font-weight: 700;
   src: local("Open Sans Bold"), local("OpenSans-Bold"),
     url(https://fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff)
       format("woff");
@@ -144,10 +134,11 @@ h1 {
 
 h2 {
   font-size: 2.4rem;
+  font-weight: 100;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 1.8rem;font-weight: 100;
 }
 
 h4,
@@ -163,7 +154,6 @@ li {
 }
 
 a {
-  font-weight: bold;
   text-decoration: none;
 }
 

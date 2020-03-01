@@ -1,5 +1,5 @@
 import React from "react";
-import shadow from "../../images/shadow.png";
+// import shadow from "../../images/shadow.png";
 
 export default function ShadowFilter() {
   return (
@@ -7,7 +7,8 @@ export default function ShadowFilter() {
       className="shadowFilter shadowMove"
       data-rellax-vertical-scroll-axis="xy"
     >
-      <img className="topShadow" src={shadow} alt="shadow" />
+      
     </div>
   );
 }
+/* <img className="topShadow" src={shadow} alt="shadow" /> */

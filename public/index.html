@@ -30,11 +30,11 @@
           ""
         );
         var rellax = new Rellax(".header-move", {
-          speed: -7,
+          speed: 10,
           center: true
         });
         var shadowMove = new Rellax(".shadowMove", {
-          speed: -2,
+          speed: -5,
           horizontal: true
         });
         var shadowFade = new Rellax(".shadowFade", {
@@ -42,6 +42,10 @@
           wrapper: null,
           round: false,
           horizontal: false
+        });
+        //general use
+        var rellax = new Rellax(".gRellax", {
+          center: true
         });
 
         // Look for .hamburger
