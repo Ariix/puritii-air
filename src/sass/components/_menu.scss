@@ -85,16 +85,26 @@ svg {
   color: white;
   position: relative;
 }
+
 .orange {
   position: relative;
   margin-top: 8.9rem;
-  text-align: center;
   height: 50px;
-  letter-spacing: 1rem;
-  padding-top: 1.4rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: white;
   background-color: #ff9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    clear: both;
+  }
+  h3 {
+    margin: 0;
+    padding:0;
+    text-align: center;
+  }
 }
 
 #menu {
@@ -162,4 +172,12 @@ svg {
     -webkit-transform: none;
     transform: none;
   }
+}
+@media (max-width:992px) {
+  .orange h3 span {
+     font-size: 1rem;
+     display: inherit;
+     flex-direction: column
+  }
+  .menu-title {display:none;}
 }
