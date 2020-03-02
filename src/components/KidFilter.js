@@ -49,6 +49,10 @@ class KidFilter extends Component  {
          <div className="kid-filter-wrap">
             <img className="filter-small" src={displaySmall} alt=""/>
             <img className="filter-large" src={displayLarge} alt=""/>
+            <figure className="point">
+              <figure className="arrow"></figure>
+            </figure>
+            <figure className="flash-point"></figure>
          </div>
          
          <div className="kid-text-area">
