@@ -1,5 +1,30 @@
 .site-footer {
-    height: 50vh;
     background-color: #00AEC7;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10rem 1rem;
+    .logo-pad, .social-media {
+        flex-basis: 33%;
+    }
+    .logo-pad {
+        padding:0;
+        svg {
+            width: 280px;
+        }
+    }
+}
+.footer-nav {
+    flex-basis: 20%;
+    a {
+        display: block;
+        text-align: left;
+        font-size: 22px;
+        margin-bottom: 2rem;
+        letter-spacing: 4px;
+        &::after {content: unset;}
+    }
+}
+.social-media {
+    text-align: left;
 }
