@@ -58,15 +58,14 @@
     grid-gap: 1.5rem;
     opacity:0;
     transition: opacity 1s;
-    // > div {
-    //     overflow: hidden;
-    //     position: relative;
-    // }
+    .title {
+        max-width:40rem;
+    }
     .circle {
         max-width: 15rem;
     }
     p {
-        font-size: 1.5vw;
+        font-size: 3.3rem;
         letter-spacing: 5px;
         margin-top:.5rem;
         transform:translateY(4vw);
@@ -91,9 +90,12 @@
         .hepa-text-area {
             top:15rem;
             width: 65rem;
-            left:5%;
+            left:7%;
+            .title {
+                max-width: 25rem;
+            }
             p {
-                font-size: 3rem;
+                font-size: 2rem;
             }
             .circle {
                 max-width: 12rem;

@@ -55,7 +55,7 @@ class KidFilter extends Component  {
             <figure className="flash-point"></figure>
          </div>
          
-         <div className="kid-text-area">
+         <div className="kid-text-area gRellax" data-rellax-speed="2">
            <div>
               <img className="circle-34" src={circle34} alt=""/>
            </div>

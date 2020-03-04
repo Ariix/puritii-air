@@ -19,7 +19,7 @@ class CouchFilter extends Component  {
     let options = {
       root: this.x,
       rootMargin: "0px",
-      threshold: 0.4
+      threshold: 0.6
     };
     this.observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -43,7 +43,7 @@ class CouchFilter extends Component  {
           <figure className="couch-and-machine" >
              <figure className="arrows gRellax" data-rellax-speed="3"></figure>
           </figure>
-          <div className="couch-text-area">
+          <div className="couch-text-area gRellax" data-rellax-speed="3">
               <img src={threeSixty} alt="" />
               <div>
                 <img src={title} alt="" className="title"/>

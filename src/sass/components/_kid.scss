@@ -18,7 +18,7 @@
       background-position: center;
       z-index: -1;
       filter: blur(30px);
-      transition: filter 3s;
+      transition: filter 3s 3s;
   }
   .white-grad{
     position: absolute;
@@ -29,6 +29,7 @@
     background-image: linear-gradient(white, transparent);
     margin: 0;
   }
+  .filter-large {max-height: 100vh;}
   .filter-small, .title-small {
     display: none;
   }
@@ -83,7 +84,7 @@
 
   .kid-text-area {
     position: absolute;
-    top:10%;
+    top:15%;
     left:5%;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -109,12 +110,12 @@
   }
   .arrow {
     transform: translate(10rem, 0px) scaleX(0);
-    animation: arrow 1s linear 2s forwards;
+    animation: arrow 1s linear forwards;
   }
   .flash-point {
     animation: flash 500ms forwards;
     animation-iteration-count: 5;
-    animation-delay: 3s;
+    animation-delay: 1s;
   }
 } 
 

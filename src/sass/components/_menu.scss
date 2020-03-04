@@ -11,7 +11,6 @@ div.menu {
   justify-content: space-between;
   padding-right: 10px;
   z-index: 999999;
-  // box-shadow: 0 7px 10px -6px grey;
   opacity: 0;
 
   div.item-wrap {
@@ -76,7 +75,6 @@ img.logo {
 }
 
 svg {
-  width: 185px;
   fill: white;
 }
 
@@ -125,30 +123,21 @@ svg {
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
   ul {
     padding: 0;
     margin-top: 7rem;
-  }
-
-  li {
     list-style: none;
-    font-size: 5rem;
+    letter-spacing: .2rem;
   }
   z-index: -1;
-  opacity: 0.9;
-}
-
-.fly-menu {
-  opacity: 0;
 }
 
 .show-menu {
   animation: showMenu 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
-.fly-menu-inner {
-  text-align: left;
-}
+
 .menu-title {
   text-transform: uppercase;
   width: 160px;
@@ -180,4 +169,26 @@ svg {
      flex-direction: column
   }
   .menu-title {display:none;}
+}
+
+@media (min-width:1200px) {
+  .hamburger {
+    display: none!important;
+  }
+   .fly-menu {
+     opacity: 1;
+     position: relative;
+     background-color: transparent;
+     height:unset;
+     width:50%;
+     top:0;
+     margin-right:0;
+     ul {
+       margin:0;
+       height: 90px;
+       display: flex;
+       align-items: center;
+       justify-content: space-evenly;
+     }
+   }
 }

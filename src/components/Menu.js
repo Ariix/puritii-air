@@ -17,9 +17,9 @@ export default function Menu() {
 
       <div className="fly-menu">
         <ul>
-          <li>Overview</li>
-          <li>Study</li>
-          <li>Tech Specs</li>
+          <li>OVERVIEW</li>
+          <li>STUDY</li>
+          <li>TECH SPECS</li>
         </ul>
       </div>
     </div>

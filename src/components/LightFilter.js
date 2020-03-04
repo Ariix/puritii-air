@@ -5,30 +5,44 @@ import titleSmall from "../images/blue-filter-title-small.png";
 import titleLarge from "../images/blue-filter-title-large.png";
 
 class Lightfilter extends Component {
-  selector;
+  section;
+  shade;
   observer;
 
   constructor(props) {
     super(props);
-    this.selector = React.createRef();
+    this.section = React.createRef();
+    this.shade = React.createRef();
     this.state = {
       count: 0
     };
   }
 
   componentDidMount = () => {
-    var x = this.selector.current;
+    var x = this.section.current;
+    var shade = this.shade.current;
     let options = {
       root: this.x,
       rootMargin: "0px",
-      threshold: .5
+      threshold: [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
     };
     this.observer = new IntersectionObserver(entries => {
+      const distance = entries[0].boundingClientRect.top;
       if (entries[0].isIntersecting) {
-        x.classList.add("active");
+        if (distance <= window.innerHeight / 2) {
+          x.classList.add("active");
+        }else {
+          x.classList.remove("active");
+        }
+        if (distance <= window.innerHeight / 6) {
+          shade.classList.add('inactive-shade');
+        }else {
+          shade.classList.remove('inactive-shade');
+        }
       } 
       else {
         x.classList.remove("active");
+      
       }
     }, options);
     this.observer.observe(x);
@@ -40,8 +54,8 @@ class Lightfilter extends Component {
 
   render(){
     return (
-      <div className="blue-sky" ref={this.selector}>
-          <div className="shade"></div>
+      <div className="blue-sky" ref={this.section}>
+          <div className="shade" ref={this.shade}></div>
           <div className="light-filter-text gRellax" data-rellax-speed="2">
             <img alt="" className="title-small" src={titleSmall}/>
             <img alt="" className="title-large" src={titleLarge}/>

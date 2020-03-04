@@ -1,5 +1,6 @@
 .blue-sky {
   position: relative;
+  z-index: -1;
   height: 100vh;
   min-height: 700px;
   background-image: url("../../images/blu_sky.png");
@@ -8,16 +9,16 @@
   background-position: center bottom;
   margin:-3rem;
   background-size: cover;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transition: opacity 1.5s;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-color: black;
+  //   transition: opacity 1.5s;
+  // }
   .title {
     margin: 0 auto;
   }
@@ -31,23 +32,22 @@
   }
 }
 
-.active.blue-sky::after {
-  opacity: 0;
-}
+// .active.blue-sky::after {
+//   opacity: 0;
+// }
 
 .shade{
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    height: 10vh;
+    height: 100vh;
     background: linear-gradient(black, transparent);
     z-index: 1;
     transition: 1.5s transform ease-in-out;
-    transition-delay: .5s;
   }
-  .active .shade {
-    transform: translateY(-20vh);
+  .shade.inactive-shade {
+    transform: translateY(-100vh);
   }
 .light-filter-text {
   position: absolute;
@@ -71,7 +71,6 @@
 }
 .five-points{
   position: absolute;
-  z-index: 99;
   bottom:10%;
   right:0;
   left:0;

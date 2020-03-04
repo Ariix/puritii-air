@@ -40,7 +40,7 @@ class Dark2 extends Component {
     const dots = require('../images/dots.svg');
     return (
       <div className="dark-bg2" ref={this.selector}>
-        <img alt="" src={text} className="text gRellax" data-rellax-speed="6"/>
+        <img alt="" src={text} className="text"/>
         <img  className="dots2 gRellax" src={dots} alt="" data-rellax-speed="-5"/>
       </div>
     );

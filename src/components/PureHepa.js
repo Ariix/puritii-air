@@ -2,31 +2,43 @@
 import React, { Component } from "react";
 
 class PureHepa extends Component  {
-  selector;
+  hepaSection;
+  circles;
   IntersectionObserver;
 
   constructor(props) {
     super(props);
-    this.selector = React.createRef();
+    this.hepaSection = React.createRef();
+    this.circles = React.createRef();
     this.state = {
       count: 0
     };
   }
 
     componentDidMount = () => {
-    var x = this.selector.current;
+    var x = this.hepaSection.current;
+    var y = this.circles.current;
     let options = {
       root: this.x,
       rootMargin: "0px 0px 0px",
       threshold: .7
     };
     this.observer = new IntersectionObserver(entries => {
+      
       if (entries[0].isIntersecting) {
         x.classList.add("active");
       } 
       else {
         x.classList.remove("active");
       }
+
+      const distance = entries[0].boundingClientRect.top;
+      if (distance < window.innerHeight / 2) {
+        x.classList.add("force-circles");
+      }else {
+        x.classList.remove('force-circles');
+      }
+
     }, options);
     this.observer.observe(x);
   };
@@ -47,7 +59,7 @@ class PureHepa extends Component  {
     const chain = require('../images/chain.png');
     
     return (
-      <div className="pure-hepa" ref={this.selector}  >
+      <div className="pure-hepa" ref={this.hepaSection}  >
 
         <div className="left">
           <img  className="grey dots gRellax" src={dots} alt="" data-rellax-speed="-3"/>
@@ -64,7 +76,7 @@ class PureHepa extends Component  {
           <img src={title} alt="" className="title"/>
           <p className="view-test"><img src={chain} className="chain" alt=""/>VIEW TEST REPORT</p>
           <p>倍净多效空气净化器独特RVOC吸附网，含纳米微孔沸石及超活性碳（Ultra-Activated Carbon）双重技术，再加上去除甲醛的速度达CADR 554m3/h，能快速循环清除甲醛及有害气体，把室内甲醛量大幅降至低于0.008mg/m3, 比国际标准更安全。倍净多效空气净化器，照料孩子脑部发育，给孩子置身大自然的清新学习环境。</p>
-          <div className="circles">
+          <div className="circles" ref={this.circles}>
              <img src={circle1} className="circle1" alt="" />
              <img src={circle2} className="circle2" alt="" />
              <img src={circle3} className="circle3" alt="" />

@@ -40,7 +40,7 @@ class DarkFilter extends Component {
   render(){
     const dots = require('../images/dots.svg');
     return (
-      <div className="dark-bg" ref={this.selector}>
+      <div className="dark-bg" ref={this.selector} >
         <Headline></Headline>
         <TopFilter></TopFilter>
         <img  className="dots1 gRellax" src={dots} alt="" data-rellax-speed="-7"/>
