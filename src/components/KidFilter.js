@@ -17,7 +17,7 @@ class KidFilter extends Component  {
     let options = {
       root: this.x,
       rootMargin: "0px 0px 0px",
-      threshold: .9
+      threshold: .8
     };
     this.observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {

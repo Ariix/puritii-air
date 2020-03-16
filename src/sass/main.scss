@@ -1,11 +1,9 @@
 
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 body,
 html {
-  width: 100%;
   margin: 0;
   padding: 0;
-  font-family: MStiffHeiPRC-UltraBold, MStiffHei PRC, arial, sans-serif, serif;
   color:white;
 }
 
@@ -22,9 +20,9 @@ html {
 @import "components/hepa";
 @import "components/pure-hepa";
 @import "components/dark";
-@import "components/dark2";
 @import "hamburgers";
 @import "components/blu";
 @import "components/kid";
 @import "components/contact";
 @import "components/footer";
+@import "components/items/modal"

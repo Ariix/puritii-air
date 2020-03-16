@@ -4,9 +4,9 @@ import Shadow from "./ShadowFilter";
 
 export default function TopFilter() {
   return (
-    <div className="filter-house ">
+    <div className="filter-house">
       <Shadow></Shadow>
-      <img src={filter} alt="filter" className="filter"></img>
+      <img src={filter} alt="filter" className="filter" ></img>
     </div>
   );
 }

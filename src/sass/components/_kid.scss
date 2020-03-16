@@ -18,7 +18,7 @@
       background-position: center;
       z-index: -1;
       filter: blur(30px);
-      transition: filter 3s 3s;
+      transition: filter 2s;
   }
   .white-grad{
     position: absolute;
@@ -36,7 +36,7 @@
   .kid-filter-wrap {
     max-width: 60%;
     position: absolute;
-    right: -20%;
+    right: -15%;
     bottom: 0;
     max-height: 90%;
     display: flex;
@@ -110,12 +110,12 @@
   }
   .arrow {
     transform: translate(10rem, 0px) scaleX(0);
-    animation: arrow 1s linear forwards;
+    animation: arrow 1s linear 1s forwards;
   }
   .flash-point {
     animation: flash 500ms forwards;
-    animation-iteration-count: 5;
-    animation-delay: 1s;
+    animation-iteration-count: 3;
+    animation-delay: 2s;
   }
 } 
 

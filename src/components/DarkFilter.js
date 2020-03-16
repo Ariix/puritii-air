@@ -19,8 +19,8 @@ class DarkFilter extends Component {
     var x = this.selector.current;
     let options = {
       root: this.x,
-      rootMargin: "0px",
-      threshold: .7
+      rootMargin: "-200px 0px 0px 0px",
+      threshold: .5
     };
     this.observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -39,12 +39,17 @@ class DarkFilter extends Component {
 
   render(){
     const dots = require('../images/dots.svg');
+    const text = require('../images/white-yellow-blue-text.png');
+    
     return (
-      <div className="dark-bg" ref={this.selector} >
+      <div className="dark-bg" ref={this.selector}>
         <Headline></Headline>
         <TopFilter></TopFilter>
-        <img  className="dots1 gRellax" src={dots} alt="" data-rellax-speed="-7"/>
-        
+        <div className="second-section gRellax" data-rellax-speed="4">
+          <img alt="" src={text} className="text"/>
+          <img  className="dots1" src={dots} alt=""/>
+          <img  className="dots2" src={dots} alt="" />
+        </div>
       </div>
     );
   }

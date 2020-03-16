@@ -1,4 +1,4 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 
 .site-footer {
     background-color: #00AEC7;
@@ -15,7 +15,7 @@
         display: flex;
         justify-content: space-between;
         i {
-            margin: 0 2rem;
+            margin-right: 5rem;
         }
     }
     .logo-pad {
@@ -42,11 +42,20 @@
         flex-direction: column;
         text-align: left;
         }
+        .logo-pad svg {
+            width:180px;
+        }
         .social-media {
             justify-content: flex-start;
+            i {
+                margin-right: 5%;
+            }
         }
     }
     .footer-nav {
         margin: 7rem 0;
+        a {
+            font-size: 1.5rem;
+        }
     }
 }

@@ -1,7 +1,7 @@
 $orange: #ff9016;
 .pure-hepa {
     height: 70vh;
-    min-height: 50rem;
+    min-height: 60rem;
     max-height: 40vw;
     background-color: white;
     display: flex;
@@ -26,7 +26,7 @@ $orange: #ff9016;
     opacity:0;
     transition: 1s opacity;
     }
-    .filter-layer {top:-10rem;z-index: 3;}
+    .filter-layer {top:-5rem;z-index: 3;}
     .filter-graphic {bottom:-10rem;z-index: 2;}
 
     .grey.dots{
@@ -57,10 +57,20 @@ $orange: #ff9016;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 5rem;
      }
      .title {
-         max-width: 30rem;
+         width: 50%;
+         max-width: 500px;
+         margin-top:5%;
+
+     }
+     .orange-square-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
      }
      .blue-square-wrap {
         position: absolute;
@@ -120,7 +130,7 @@ $orange: #ff9016;
     }
 }
 .active {
-    .filter-layer {top:-10rem; animation: filter 4s ease-in-out forwards 1s infinite; z-index: 3;}
+    .filter-layer {top:-5rem; animation: filter 4s ease-in-out forwards 1s infinite; z-index: 3;}
     .circles img{
         transform: translateX(0) rotate(0);
      }
@@ -163,8 +173,7 @@ $orange: #ff9016;
             }
         }
         .grey.dots {
-            max-width: 35rem;
-            bottom: 50%;
+            display:none;
         }
         .filter-wrap {
             position: relative;
@@ -195,9 +204,6 @@ $orange: #ff9016;
         .right {
             width:60%;
             padding:1rem;
-        }
-        .grey.dots {
-            left: -17rem;
         }
         .filter-wrap{
             height: 45rem;

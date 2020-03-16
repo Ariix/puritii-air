@@ -19,7 +19,7 @@ class CouchFilter extends Component  {
     let options = {
       root: this.x,
       rootMargin: "0px",
-      threshold: 0.6
+      threshold: 0.4
     };
     this.observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {

@@ -267,14 +267,11 @@ header:after {
 
 .headline {
   width: 650px;
-  max-width: 90%;
+  max-width: 40%;
   margin: 0 auto;
   z-index: 16;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 10rem;
+  position: relative;
+  top: 10%;
 }
 
 .r2d2 {
@@ -298,12 +295,13 @@ header:after {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding-left: 0.5rem;
+    font-size: 1.25rem;
   }
 }
 .play-btn {
   width: 3rem;
   margin: 0 auto;
-  padding-top: 3rem;
+  padding-top: 3%;
 }
 
 .fixedbg {
@@ -437,19 +435,16 @@ header:after {
 @-webkit-keyframes pulse {
   0% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 
   50% {
     opacity: 0.8;
-    -webkit-transform: scale(0.8);
     transform: scale(0.8);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
@@ -457,43 +452,39 @@ header:after {
 @keyframes pulse {
   0% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 
   50% {
     opacity: 0.8;
-    -webkit-transform: scale(0.8);
     transform: scale(0.8);
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
 
 @-webkit-keyframes rotate-up {
   100% {
-    -webkit-transform: rotateZ(-4deg);
     transform: rotateZ(-4deg);
   }
 }
 
 @keyframes rotate-up {
   100% {
-    -webkit-transform: rotateZ(-4deg);
     transform: rotateZ(-4deg);
   }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 767px){
   .headline{
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    top: -10rem;
+    width: 40rem;
+    max-width: 90%;
   }
 }

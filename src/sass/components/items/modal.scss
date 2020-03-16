@@ -1,0 +1,215 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background-color: black;
+  opacity:.7;
+  z-index: 999;
+}
+  
+.modal-box {
+  position:fixed;
+  background: #527089;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 9999;
+  transform: translateY(-100%);
+  animation: modalBox 500ms forwards;
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+@keyframes modalBox {
+  100% {
+     transform:translateY(0);
+  }
+}
+  
+.checkout-filter {
+  max-height: 300px;
+  height: 40%;
+  display: none;
+}
+.checkout-filter-small {
+  max-height: 300px;
+  height: 40%;
+}
+.enter-code {
+  width:100%;
+  height: 38px;
+  position: relative;
+  letter-spacing: 3px;
+  color: #9a9a9a;
+}
+.counter-field {
+  height:13rem;
+  display:flex;
+  align-items: center;
+}
+
+.display-block {
+  display: block;
+}
+
+.checkout-wrapper {
+  background-color: #FF9016;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    width: 50%;
+    padding-left: 35px;
+    font-size: 14px;
+    span {
+      font-size: 170%;
+    }
+  }
+  button {
+    width: 50%;
+    background-color: #ff9016;
+    border: unset;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    height: 70px;
+    cursor: pointer;
+  }
+}
+
+.modal-box .close-modal {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  border-color:transparent;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 200ms;
+  &::before, &::after {
+    content: "";
+    height: 4px;
+    width: 36px;
+    border-radius: 2px;
+    background-color: #ff9016;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+//cart counter
+.counter-field {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+.counter {
+  background-color:transparent;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+  
+  @media (min-width:992px) {
+    .modal-box {
+      text-align: left;
+      width: 80%;
+      max-width: 850px;
+      height: 500px;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -200%) scale(0);
+      opacity:0;
+      > * {
+        padding-left: 270px;
+      }
+      img {
+        padding:0;
+      }
+      h2 {
+        font-size: 3rem;
+        letter-spacing: 3px;
+      }
+    }
+    @keyframes modalBox {
+      100% {
+        transform:translate(-50%,-50%) scale(1);
+        opacity: 1;
+      }
+    }
+    .counter-field {
+      padding-left: 0!important;
+      margin-left: 270px;
+    }
+    .checkout-filter-small {
+        display: none;
+    }
+    .checkout-filter {
+      display: block;
+      position: absolute;
+      top: -10%;
+      bottom:-10%;
+      left: -4rem;
+      max-height: unset;
+      height: 120%;
+    }
+}
+
+//Active Class Change when clicked on PROMOTION CODE
+.active {
+  .enter-code {
+    color: #537088;
+    &::after {
+      font-family: FontAwesome;
+      content: "\f00c";
+      color: #00CC00;
+      font-size: 3rem;
+      height: 38px;
+      position: absolute;
+      right: 0;
+      top:0;
+    }
+  }
+  .total span{
+    animation: flashTotalPrice 600ms;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes flashTotalPrice {
+    50% {
+      opacity:0;
+      transform: scale(.9);
+    }
+  }
+}

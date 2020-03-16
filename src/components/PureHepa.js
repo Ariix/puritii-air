@@ -3,13 +3,11 @@ import React, { Component } from "react";
 
 class PureHepa extends Component  {
   hepaSection;
-  circles;
   IntersectionObserver;
 
   constructor(props) {
     super(props);
     this.hepaSection = React.createRef();
-    this.circles = React.createRef();
     this.state = {
       count: 0
     };
@@ -17,7 +15,6 @@ class PureHepa extends Component  {
 
     componentDidMount = () => {
     var x = this.hepaSection.current;
-    var y = this.circles.current;
     let options = {
       root: this.x,
       rootMargin: "0px 0px 0px",
@@ -63,7 +60,9 @@ class PureHepa extends Component  {
 
         <div className="left">
           <img  className="grey dots gRellax" src={dots} alt="" data-rellax-speed="-3"/>
-          <figure className="square orange"></figure>
+          <div className="orange-square-wrap">
+            <figure className="square orange"></figure>
+          </div>
           <div className="filter-wrap">
             <img src={filterLayer} className="filter-layer" alt="" />
             <img src={filterGraphic} className="filter-graphic" alt="" />
@@ -73,6 +72,7 @@ class PureHepa extends Component  {
         </div>
 
         <div className="right">
+          <div className="gRellax" data-rellax-speed="2">
           <img src={title} alt="" className="title"/>
           <p className="view-test"><img src={chain} className="chain" alt=""/>VIEW TEST REPORT</p>
           <p>倍净多效空气净化器独特RVOC吸附网，含纳米微孔沸石及超活性碳（Ultra-Activated Carbon）双重技术，再加上去除甲醛的速度达CADR 554m3/h，能快速循环清除甲醛及有害气体，把室内甲醛量大幅降至低于0.008mg/m3, 比国际标准更安全。倍净多效空气净化器，照料孩子脑部发育，给孩子置身大自然的清新学习环境。</p>
@@ -82,7 +82,9 @@ class PureHepa extends Component  {
              <img src={circle3} className="circle3" alt="" />
              <img src={circle4} className="circle4" alt="" />
           </div>
-          <div className="blue-square-wrap">
+          
+        </div>
+        <div className="blue-square-wrap">
             <figure className="square blue"></figure>
           </div>
         </div>

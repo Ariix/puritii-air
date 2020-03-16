@@ -7,18 +7,9 @@
   background-repeat: no-repeat;
   overflow: hidden;
   background-position: center bottom;
-  margin:-3rem;
+  margin:0 -3rem;
   background-size: cover;
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   background-color: black;
-  //   transition: opacity 1.5s;
-  // }
+
   .title {
     margin: 0 auto;
   }
@@ -38,7 +29,7 @@
 
 .shade{
     position: absolute;
-    top: 0;
+    top: -2px;
     right: 0;
     left: 0;
     height: 100vh;

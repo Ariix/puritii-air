@@ -270,17 +270,6 @@ footer li:first-child:before {
   text-align: center;
 }
 
-.button {
-  background: #269300;
-  border-radius: 0.8rem;
-  color: #fff;
-  display: block;
-  padding: 2rem;
-  margin: 0 auto;
-  text-align: center;
-  width: 20rem;
-}
-
 a {
   color: white;
   position: relative;
@@ -288,25 +277,19 @@ a {
   transition: color 0.4s ease-out;
 }
 
-a::after {
-  border-radius: 1em;
-  border-top: 0.1em solid white;
-  content: "";
-  position: absolute;
-  right: 100%;
-  bottom: 1em;
-  left: 0;
-  transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
-}
+// a::after {
+//   border-radius: 1em;
+//   border-top: 0.1em solid white;
+//   content: "";
+//   position: absolute;
+//   right: 100%;
+//   bottom: 1em;
+//   left: 0;
+//   transition: right 0.4s cubic-bezier(0, 0.5, 0, 1), border-color 0.4s ease-out;
+// }
 
 a:hover {
-  color: tomato;
   text-decoration: none;
-}
-
-a:hover::after {
-  color: tomato;
-  right: 0;
 }
 
 .title-tooltip {
@@ -368,10 +351,6 @@ a:hover::after {
   width: 0;
   opacity: 0;
   border: 1px solid black;
-}
-
-.logo-pad {
-  padding: 2rem 2rem 1rem 3rem;
 }
 
 button:focus {
