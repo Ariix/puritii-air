@@ -48,7 +48,7 @@ class HepaFilter extends Component  {
         <img  className="grey dots gRellax" src={dots} alt="" data-rellax-speed="-4"/>
 
         <div className="text-wrap">
-          <div className="hepa-text-area " data-rellax-speed="5">
+          <div className="hepa-text-area " >
                 <img src={ai} alt="" className="circle"/>
                 <div>
                   <img alt="" className="title" src={title}/>
