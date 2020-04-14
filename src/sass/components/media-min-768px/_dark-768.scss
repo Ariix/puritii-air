@@ -1,0 +1,19 @@
+//min-width 768px
+  .dark-bg {
+    background-image: url(../../../images/air-bg_tablet.jpg);
+  }
+  
+  .second-section {
+    .text{
+      width: 70%;
+    }
+    .dots1{
+      width:50%;
+      left: -25%;
+      bottom:50%;
+    }
+    .dots2{
+      right: -25%;
+      bottom:-60%;
+    }
+  }

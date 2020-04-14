@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Logo from "./logo";
-const filter = require('../images/puritii-filter-checkout.png');
-const filterSmall = require('../images/puritii-filter-checkout-small.png');
 
 
 class Menu extends Component {
@@ -48,6 +46,7 @@ class Menu extends Component {
 
   render() {
     const filter = require('../images/puritii-filter-checkout.png');
+    const filterSmall = require('../images/puritii-filter-checkout-small.png');
     return (
       <div className="menu animate-menu">
         <span className="logo">

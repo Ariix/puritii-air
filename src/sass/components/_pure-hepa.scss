@@ -1,70 +1,37 @@
 $orange: #ff9016;
 .pure-hepa {
-    height: 70vh;
+    height: calc(100vh - 60px);
     min-height: 60rem;
-    max-height: 40vw;
     background-color: white;
     display: flex;
     z-index: 0;
     color:#616161;
     .left, .right {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .right {
-        width:50%;
+        width:60%;
+        padding:1rem;
     }
-    .left{
-        width:50%;
+    .left {
+        width:40%;
     }
-    // Left Section
-    .filter-graphic, .filter-layer {
-    position: absolute;
-    right:3vw;
-    z-index: 10;
-    width: 32vw;
-    min-width: 45rem;
-    opacity:0;
-    transition: 1s opacity;
+    .title {
+        max-width: 17rem;
     }
-    .filter-layer {top:-5rem;z-index: 3;}
-    .filter-graphic {bottom:-10rem;z-index: 2;}
-
     .grey.dots{
-        filter: invert(50%);
-        z-index: 2;
-        position: absolute;
-        max-width: 30vw;
-        left:-8vw;
-        bottom:0;
-        z-index: 0;
+    display: none;
     }
     .square {
         width: 40vw;
         height:40vw;
         transform:rotate(45deg);
         margin:0;
-     }
-     .orange {
-         background-color: $orange;
-         position: absolute;
-         bottom:-30vw;
-         left:-10vw;
-         z-index: 0;
-     }
-
-     // Right Section
-     .right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-     }
-     .title {
-         width: 50%;
-         max-width: 500px;
-         margin-top:5%;
-
-     }
-     .orange-square-wrap {
+    }
+    .orange-square-wrap {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -72,7 +39,14 @@ $orange: #ff9016;
         height: 100%;
         overflow: hidden;
      }
-     .blue-square-wrap {
+    .orange {
+        background-color: $orange;
+        position: absolute;
+        bottom:-30vw;
+        left:-10vw;
+        z-index: 0;
+    }
+    .blue-square-wrap {
         position: absolute;
         top: 0;
         right: 0;
@@ -80,161 +54,103 @@ $orange: #ff9016;
         height: 100%;
         overflow: hidden;
      }
-     .blue {
+    .blue {
         background-color: #00bfd8;
         margin-top:-30vw;
         margin-right:-20vw;
         z-index: 1;
      }
-    p { margin-top:0;
-        font-size: 1.75rem;
-        max-width: 80%;
-        letter-spacing: 4px;
-    }
-    .view-test{
-        color:$orange;
-        font-size: 2rem;
-        margin:1rem 0;
-        font-weight: bold;
+    p { 
+        max-width: 95%;
+        font-size: 1.25rem;
         letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-    }
-    img.chain {
-        margin: 0 1rem 0 0 ;
-    }
-     
+        margin-top:0;
+    } 
 }
-.circles {
-    width: 80%;
-    max-width: 80rem;
+.line-draw-wrap {
     display: flex;
+    max-width: 95%;
+}
+.filter-wrap{
+    position: relative;
+    height: 50rem;
+    width: 30rem;
+    margin-left: -15rem;
+}
+.filter-graphic, .filter-layer {
+    position: absolute;
+    right:3vw;
+    z-index: 10;
+    width: 32vw;
+    min-width: 100%;
+    opacity:0;
+    transition: 700ms opacity;
+}
+.filter-layer {
+    top:3rem;
+    z-index: 3;
+    transform: scale(1.05) translate3d(0, 100px, 0);
+    transition: 1.5s transform, opacity 1.5s;
+}
+.filter-graphic {
+    bottom:0;
+    z-index: 2;
+}
+p.view-test{
+    color:$orange;
+    font-size: 1rem;
+    margin:1rem 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    letter-spacing: unset;
+    position: relative;
+}
+img.chain {
+    margin: 0 1rem 0 0 ;
+}
+
+.circles {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 16rem;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     z-index: 1;
     img {
-        transition: 1s transform;
-        transform: translateX(-100vw) rotate(-720deg);
-        max-width: 8vw;
+        transition: 800ms transform;
+        transform: translate3d(-100vw,0,0) rotate(-720deg);
+        max-width: 50%;
     }
     .circle1 {
-        transition-delay: 1000ms;
+        transition-delay: 1800ms;
     }
     .circle2 {
-        transition-delay: 1100ms;
+        transition-delay: 1900ms;
     }
     .circle3 {
-        transition-delay: 1200ms;
+        transition-delay: 2000ms;
     }
     .circle4 {
-        transition-delay: 1300ms;
+        transition-delay: 2100ms;
     }
 }
+
+
+
+//Active Class Animation
 .active {
-    .filter-layer {top:-5rem; animation: filter 4s ease-in-out forwards 1s infinite; z-index: 3;}
     .circles img{
-        transform: translateX(0) rotate(0);
+        transform: translate3d(0,0,0) rotate(0);
      }
      .filter-graphic, .filter-layer {
          opacity: 1;
      }
+     .filter-layer{transform:scale(1.05) translate3d(0,0,0);}
+     p.view-test::before{
+        transition: transform 3s;
+         transform: scaleX(-1);
+     }
 }
-.force-circles .circles img{
-    transform: translateX(0) rotate(0);
- }
-//Animations
-@keyframes filter {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(3rem);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-@media (max-width:992px){
-    .pure-hepa {
-        height: calc(100vh - 90px);
-        max-height:  calc(100vh - 90px);
-        .left {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .right {
-            .title {
-                max-width: 30rem;
-                height: auto;
-                width: 100%;
-            }
-        }
-        .grey.dots {
-            display:none;
-        }
-        .filter-wrap {
-            position: relative;
-            height: 45rem;
-            width: 100%;
-        }
-        .filter-layer, .filter-graphic{
-            min-width: unset;
-        }
-        .filter-layer {
-            top:0;
-        }
-        .filter-graphic {
-            bottom: 0;
-        }
-        p {
-            font-size: 1.5rem;
-        }
-    }     
-}
-@media (max-width:767px){
-    .pure-hepa {
-        overflow: hidden;
-        min-height: 60rem;
-        .left {
-            width:40%;
-        }
-        .right {
-            width:60%;
-            padding:1rem;
-        }
-        .filter-wrap{
-            height: 45rem;
-            width: 30rem;
-            margin-left: -15rem;
-        }
-        .filter-layer, .filter-graphic{
-            height: auto;
-            min-width: 100%;
-        }
-        p {
-            max-width: 95%;
-           font-size: 1.25rem;
-           letter-spacing: 2px;
-        }
-        .circles {
-            max-width: 60%;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            
-            img {
-                max-width: 50%;
-            }
-        }
-        .view-test {
-            font-size: 1rem;
-        }
-    }
-}
-
-
-
-
-

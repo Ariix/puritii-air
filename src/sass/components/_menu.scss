@@ -168,8 +168,9 @@ svg {
 }
 
 @media (max-width: 767px) {
-  .menu {
+  div.menu {
     padding: 0 15px!important;
+    height: 60px;
     .logo-pad {
       width:100px;
       margin-right: 0;
@@ -180,6 +181,10 @@ svg {
       padding: 0 30px;
       height: 35px;
     }
+  }
+  .fly-menu {top:60px;}
+  .orange {
+    margin-top: 6rem;
   }
 }
 
@@ -197,7 +202,7 @@ svg {
     display: none;
   }
   .hide-on-mobile {
-    display: block;
+    display: block!important;
   }
   .hamburger {
     display: none!important;

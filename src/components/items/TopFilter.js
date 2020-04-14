@@ -1,12 +1,11 @@
 import React from "react";
-import filter from "../../images/r2.png";
-import Shadow from "./ShadowFilter";
+import airFilter from "../../images/air-filter.png";
 
 export default function TopFilter() {
-  return (
-    <div className="filter-house">
-      <Shadow></Shadow>
-      <img src={filter} alt="filter" className="filter" ></img>
+  return (      
+    <div data-rellax-speed="-2" className="filter-house rellax">
+      <div className="shadowFilter rellax" data-rellax-speed="-4"></div>
+      <img src={airFilter} alt="filter" className="filter " ></img>
     </div>
   );
 }

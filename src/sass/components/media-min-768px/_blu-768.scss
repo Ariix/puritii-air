@@ -1,0 +1,22 @@
+
+  .blue-sky { background-image: url("../../../images/blue-sky-bg_large.jpg");}
+  .light-filter-text {
+    margin: 8vh auto 0;
+    width: 70vw;
+    h2 {
+      font-size:2.5rem;
+    }
+  }
+  .five-points-small {
+    display: none;
+  }
+  .five-points{
+    display: block;
+    position: absolute;
+    bottom:5%;
+    right:0;
+    left:0;
+    margin: 0 auto;
+    max-width: 70%;
+    padding: 5rem;
+  }

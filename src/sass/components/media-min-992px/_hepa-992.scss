@@ -1,0 +1,16 @@
+.hepa-section {
+    .grey.dots{
+        width: 40vw;
+        right: 30%;
+        bottom: -15vh;
+    }
+}
+.hepa-text-area {
+    transform: translateX(-10vw);
+    max-width: 700px;
+    .circle {width: 11rem;}
+    .title {width:28rem;}
+    p {
+        font-size: 25px;
+    }
+}

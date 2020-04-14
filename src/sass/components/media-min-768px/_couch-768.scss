@@ -1,0 +1,15 @@
+
+    .couch-and-machine, .arrows {
+       background-position: center bottom;
+    }
+    .couch-text-area {
+        top:6%;
+        left:5%;
+        width: 90%;
+        letter-spacing: 5px;
+        > img {
+            max-width: 9rem;
+        }
+        p {font-size: 1.75rem;}
+        .title {max-width: 25rem;}
+    }
