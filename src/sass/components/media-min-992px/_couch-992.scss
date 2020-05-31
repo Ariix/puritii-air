@@ -1,0 +1,15 @@
+.couch-section {
+    height: 125vh!important;
+    min-height: 75vw;
+    &::before {
+        content: unset;
+    }
+}
+.couch-and-machine {top:0;}
+.couch-text-area {
+    width: 85%;
+    letter-spacing: 6px;
+    > img {max-width: 11rem;}
+    p {font-size: 2rem;}
+    .title {max-width: 30rem;}
+}

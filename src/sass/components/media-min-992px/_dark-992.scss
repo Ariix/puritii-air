@@ -1,0 +1,32 @@
+//min-width 992px
+  .dark-bg {
+    background-image: url(../../../images/air-bg.jpg);
+    z-index: 1;
+  }
+
+  .headline-img-small {display: none;}
+  .headline-img {display: block;}
+
+  .second-section {
+    .text {
+      width: 50vw;
+      max-width: 120rem;
+    }
+    .text-small {display: none;}
+    .text-large {display: block;}
+    .dots1{
+      top: -100%;
+      left: -20%;
+      width: 40%;
+    }
+    .dots2 {
+      display: block;
+      z-index: 999;
+      right: -20%;
+      position: absolute;
+      bottom: -40vh;
+      width: 40%;
+      opacity: 1;
+    }
+  }
+

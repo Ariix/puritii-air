@@ -1,0 +1,59 @@
+.pure-hepa{
+    height: calc(100vh - 90px);
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+    .left {
+        width: 50%;
+    }
+    .filter-wrap {
+        margin-left: unset;
+        display: flex;
+        justify-content: center;
+    }
+    .title {
+        width: 30rem;
+        max-width: 100%;
+    }
+    p {font-size: 1.5rem;}
+    p.view-test {
+        font-size: 2rem;
+        &::before {
+            content: "";
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            height: 2px;
+            width: 50vw;
+            background-color: #00bfd8;
+            transform-origin: left;
+            transform: scaleX(0);
+        }
+    }
+}
+
+.filter-graphic, .filter-layer {
+    right: unset;
+}
+.circles {
+    width: 80%;
+    max-width: 80rem;
+    flex-wrap: unset;
+    justify-content: space-between;
+    z-index: 1;
+    margin-left: 0;
+    img {
+        max-width: 8vw;
+    }
+}
+.line-draw-wrap {
+    justify-content: flex-end;
+}
+
+.active p.view-test::before{
+    transition: transform 3s;
+     transform: scaleX(-1);
+ }

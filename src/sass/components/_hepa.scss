@@ -1,0 +1,84 @@
+.hepa-section {
+    height: calc(100vh - 60px);
+    min-height: 600px;
+    position: relative;
+    overflow: hidden;
+    > div {
+        height:50%;
+        position: relative;
+    }
+    .text-wrap {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .square {
+        width: 40vw;
+        height:40vw;
+        transform:rotate(45deg);
+        position: absolute;
+        margin:0;
+        z-index: -1;
+    }
+    .orange {
+        background-color: #ff9016;
+        top:-25vw;
+        right:-25vw;
+
+    }
+    .blue {
+        background-color: #00bfd8;
+        bottom:-30vw;
+        right:calc(50vw - 20vw);
+        z-index: -1;
+    }
+    .grey.dots{
+        filter: invert(50%);
+        z-index: -2;
+        position: absolute;
+        width: 400px;
+        right:50%;
+        bottom:-100px;
+    }
+}
+
+.hepa-text-area {
+    color: #616161;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 2%;
+    padding: 1rem;
+    max-width: 500px;
+    .title {
+        width: 18rem;
+    }
+    .circle {
+        width: 7rem;
+    }
+    p {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+        margin-top: .5rem;
+    }
+}
+
+.hepa-filter-top-wrapper {
+    position: absolute;
+    right: -350px;
+    top: 0;
+    width: 600px;
+}
+
+img.display-cover {
+    position: absolute;
+    left: 9.5%;
+    top: 2.2%;
+    width: 20%;
+    opacity: 1;
+    transition: opacity 1.5s 1s;
+}
+
+.active img.display-cover {
+    opacity: 0;
+}

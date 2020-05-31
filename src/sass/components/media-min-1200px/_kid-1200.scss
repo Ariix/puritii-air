@@ -1,0 +1,90 @@
+
+
+.kidFilter {
+  min-height:650px;
+  max-height: 55vw;
+  background-position: center top 15%;
+  .filter-small, .title-small {
+    display: none;
+  }
+  .filter-large, .title-large {
+    display: block;
+  }
+  .filter-large {
+    width: 100%;
+  }
+}
+
+.kid-filter-wrap{
+  display: block;
+  width: 52%;
+  right: -10%;
+  bottom: 0;
+  max-width: unset;
+  
+  .point {
+    left: 30%;
+    .arrow {
+      display: none;
+      animation: unset;
+    }
+  }
+}
+
+.kid-text-area {
+  width: 75%;
+  max-width: unset;
+  padding: unset;
+  position: absolute;
+  top:30%;
+  left: 0;
+  bottom: auto;
+  transform: translate3d(-40vw,0vw, 0);
+  margin: 0;
+  .title-large {
+    width: 30rem;
+    position: absolute;
+    top: -14rem;
+  }
+  .circle-34 {
+    width: 12rem;
+    position: absolute;
+    top: -14rem;
+    left: -13rem;
+  }
+  p {
+    font-size: 25px;
+    position: relative;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      top: -15px; 
+      background-color: rgba(0, 189, 214, 1);
+      height: 2px;
+      transform-origin: left;
+    }
+    &::before {
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+    }
+    &::after {
+      right: 0;
+      width: 53%;
+      transform-origin: right;
+      transform: rotateZ(-147.5deg) scaleX(0);
+    }
+  }
+  
+}
+
+.kid-text-area.hide-on-desktop {
+  display: none;
+}
+.kid-text-area.hide-on-mobile {
+  display: block;
+}
+
+.active .flash-point {
+  animation-delay: 3s;
+}

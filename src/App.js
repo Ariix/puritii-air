@@ -5,6 +5,7 @@ import Dark from "./components/DarkFilter";
 import Light from "./components/LightFilter";
 import Couch from "./components/CouchFilter";
 import Hepa from "./components/HepaFilter";
+import PureHepa from "./components/PureHepa";
 import Kid from "./components/KidFilter";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -20,6 +21,7 @@ function App() {
       <Light></Light>
       <Couch></Couch>
       <Hepa></Hepa>
+      <PureHepa></PureHepa>
       <Kid></Kid>
       <Contact></Contact>
       <Footer></Footer>

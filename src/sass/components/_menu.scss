@@ -9,9 +9,9 @@ div.menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 10px;
-  z-index: 999999;
-  // box-shadow: 0 7px 10px -6px grey;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 9999;
   opacity: 0;
 
   div.item-wrap {
@@ -69,32 +69,39 @@ div.menu {
   }
 }
 
-img.logo {
-  text-align: left;
-  width: 190px;
-  color: white;
+.logo {
+  display: flex;
+  .logo-pad {
+    width: 250px;
+    margin-right:2rem;
+    z-index: -1;
+  }
 }
 
 svg {
-  width: 185px;
   fill: white;
 }
 
-.logo {
-  width: 230px;
-  color: white;
-  position: relative;
-}
 .orange {
   position: relative;
-  margin-top: 8.9rem;
-  text-align: center;
+  margin-top: 9rem;
   height: 50px;
-  letter-spacing: 1rem;
-  padding-top: 1.4rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: white;
   background-color: #ff9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    clear: both;
+  }
+  h3 {
+    margin: 0;
+    padding:0;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 #menu {
@@ -105,48 +112,37 @@ svg {
 
 .fly-menu {
   position: absolute;
-  top: 83px;
-  right: 0;
-  background-color: #00bfd8;
-  text-align: center;
-  width: 90vw;
-  height: 90vh;
+  top: 90px;
+  background-color: #557288;
+  padding: 2rem;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  opacity: 0;
+  width: 100%;
+  margin-right: 0;
+  height: 100vh;
   ul {
     padding: 0;
     margin-top: 7rem;
-  }
-
-  li {
     list-style: none;
-    font-size: 5rem;
+    letter-spacing: .2rem;
+  }
+  li {
+    margin-bottom: 2rem;
   }
   z-index: -1;
-  opacity: 0.9;
-}
-
-.fly-menu {
-  opacity: 0;
 }
 
 .show-menu {
   animation: showMenu 0.6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
 }
 
-.fly-menu-inner {
-  text-align: left;
-}
+
 .menu-title {
   text-transform: uppercase;
-  width: 160px;
-  line-height: 2rem;
-  text-align: left;
-  top: 20px;
-  left: 240px;
-  position: absolute;
+  z-index: -1;
 }
 
 // menu animations
@@ -154,12 +150,121 @@ svg {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-4rem) scale(0.8);
-    transform: translateY(-4rem) scale(0.8);
+    transform: translateX(100%);
   }
 
   100% {
-    opacity: 0.9;
+    opacity: 0.96;
     -webkit-transform: none;
     transform: none;
   }
+}
+
+.hide-on-mobile {
+  display: none;
+}
+.hide-on-desktop {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  div.menu {
+    padding: 0 15px!important;
+    height: 60px;
+    .logo-pad {
+      width:100px;
+      margin-right: 0;
+    }
+    .button {
+      margin: 0 10px;
+      font-size: 10px;
+      padding: 0 30px;
+      height: 35px;
+    }
+  }
+  .fly-menu {top:60px;}
+  .orange {
+    margin-top: 6rem;
+  }
+}
+
+@media (max-width:992px) {
+  .orange h3 span {
+     font-size: 1rem;
+     display: inherit;
+     flex-direction: column
+  }
+  .menu-title {display:none;}
+}
+
+@media (min-width:1250px) {
+  .hide-on-desktop {
+    display: none;
+  }
+  .hide-on-mobile {
+    display: block!important;
+  }
+  .hamburger {
+    display: none!important;
+    z-index: 999;
+  }
+  .fly-menu {
+    opacity: 1;
+    position: relative;
+    background-color: transparent;
+    height:unset;
+    top:0;
+    margin-right:0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    ul {
+      margin:0;
+      height: 90px;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    a {
+      top: 45px;
+      margin: 0 30px;
+      font-size: 16px;
+    }
+    a::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left:0;
+      height: 1px;
+      width: 1rem;
+      background-color: white;
+      transition: left 200ms;
+    }
+  }
+}
+
+//Animation
+.fly-menu a:hover::before {
+    left:calc(50% - .5rem);
+}
+
+//Buy Now
+.button {
+  background-color: #537088;
+  border: unset;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 0 40px;
+  margin: 0 30px;
+  cursor: pointer;
+  z-index: -1;
+}
+button.globe {
+  background-color: transparent;
+  border: unset;
+  color: white;
+  margin-left: 1rem;
+  cursor: pointer;
 }

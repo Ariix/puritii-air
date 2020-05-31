@@ -1,0 +1,19 @@
+.hepa-section {
+    height: calc(100vh - 60px);
+}
+.hepa-text-area {
+    transform: translateX(-10vw);
+    .circle {
+        width: 9rem;
+    }
+    .title {
+        width: 23rem;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+.hepa-filter-top-wrapper {
+    right: -400px;
+    width: 900px;
+}  

@@ -1,0 +1,75 @@
+.contact {
+    padding: 10rem 3rem;
+    color:#557288;
+    max-width: 1000px;
+    margin:0 auto;
+    h2 {
+        font-size: 5rem;
+        line-height: 5rem;
+        font-weight: bold;
+        letter-spacing: 11px;
+        color:#00AEC7;
+        font-family: serif;
+        margin: 0  0 5rem -10rem;
+        position: relative;
+        &::after {
+           content:"";
+           position: absolute;
+           top:-2rem;
+           left:0;
+           width: 80px;
+           height:2px;
+           background-color:#00AEC7;
+        }
+    }
+    a {
+        color: #00AEC7;
+    }
+    .margin-bottom {
+        margin-bottom:6rem;
+    }
+}
+.offices {
+    margin-top: 10rem;
+    max-width: 90rem;
+    display: flex;
+    justify-content: space-between;
+    div {
+        margin-bottom: 5rem;
+    }
+    h3 {
+        color: #00AEC7;
+        margin:0;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 2px;
+    }
+    p {
+        margin-top:0.5rem;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1500px){
+    .contact {
+        max-width: 80%;
+        h2 {
+            font-size: 4rem;
+            line-height: 4rem;
+            letter-spacing: 5px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 992px){
+    .contact {
+        h2 {
+            margin-left: -5rem;
+        }
+    }
+    .offices {
+        display:block;
+    }
+}

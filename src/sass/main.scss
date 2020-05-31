@@ -1,8 +1,10 @@
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 body,
 html {
-  width: 100%;
   margin: 0;
   padding: 0;
+  color:white;
 }
 
 // imports
@@ -13,8 +15,47 @@ html {
 @import "components/scroll";
 @import "components/containers";
 @import "components/grid";
-@import "components/blu";
+
 @import "components/dark";
-@import "hamburgers";
 @import "components/blu";
+@import "components/couch";
+@import "components/hepa";
+@import "components/pure-hepa";
 @import "components/kid";
+@import "components/contact";
+
+@import "hamburgers";
+@import "components/footer";
+@import "components/items/modal";
+
+@media (min-width:768px) {
+  @import "components/media-min-768px/_dark-768";
+  @import "components/media-min-768px/_blu-768";
+  @import "components/media-min-768px/_couch-768";
+  @import "components/media-min-768px/_hepa-768";
+  @import "components/media-min-768px/_pure-hepa-768";
+  @import "components/media-min-768px/_kid-768";
+}
+
+@media (min-width:992px) {
+  @import "components/media-min-992px/_dark-992";
+  @import "components/media-min-992px/_couch-992";
+  @import "components/media-min-992px/_hepa-992";
+  @import "components/media-min-992px/_pure-hepa-992";
+  @import "components/media-min-992px/_kid-992";
+}
+
+@media (min-width:1200px) {
+  @import "components/media-min-1200px/_blu-1200";
+  @import "components/media-min-1200px/_couch-1200";
+  @import "components/media-min-1200px/_hepa-1200";
+  @import "components/media-min-1200px/_pure-hepa-1200";
+  @import "components/media-min-1200px/_kid-1200";
+}
+
+@media (min-width:1500px) {
+  @import "components/media-min-1500px/_couch-1500";
+  @import "components/media-min-1500px/_hepa-1500";
+  @import "components/media-min-1500px/_pure-hepa-1500";
+  @import "components/media-min-1500px/_kid-1500";
+}

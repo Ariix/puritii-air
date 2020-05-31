@@ -1,0 +1,110 @@
+.hepa-section {
+    min-height: 650px;
+    max-height: 55vw;
+    .hide-on-desktop {
+        display: none;
+    }
+    > div {
+        position: unset;
+    }
+    .square {
+        width: 40vw;
+        height:40vw;
+    }
+    .orange {
+        top:-20vw;
+        right:-20vw;
+
+    }
+    .blue {
+        bottom:-30vw;
+    }
+    .grey.dots{
+        bottom: -25vh;
+        right: 20vw;
+    }
+    .text-wrap {
+        margin-top:2%;
+        margin-left:5%;
+    }
+    .hepa-filter {
+        width: 100%;
+    }
+        
+}
+
+.hepa-filter-top-wrapper {
+    right: 0;
+    bottom: -5rem;
+    width: 40%;
+    top: unset;
+}
+
+.hepa-text-area {
+    display: grid;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top:12%;
+    left: 0;
+    bottom: auto;
+    transform: translate3d(-46vw,0vw, 0);
+    p::before, p::after {
+        content: "";
+        position: absolute;
+        top: -1.5rem; 
+        background-color: rgba(0, 189, 214, 1);
+        height: 2px;
+        transform-origin: left;
+    }
+    p::before {
+        left: 0;
+        width: 100%;
+        transform: scaleX(0);
+        }
+    p::after {
+        right: 0;
+        width: 37%;
+        transform-origin: right;
+        transform: rotateZ(-170deg) scaleX(0) ;
+    }
+    .circle {
+        width: 12rem;
+        max-width: unset;
+        position: absolute;
+        left: -100%;
+        position: absolute;
+        left: -12rem;
+        top: -11.5rem;
+    }
+    .title {
+        width:30rem;
+        max-width: unset;
+        position:absolute;
+        top:-11.5rem;
+    }
+    p {
+        font-size: 25px;
+        position: relative;
+        margin-top:2rem;
+    }
+}
+.active {
+    .hepa-text-area {
+        p::before {
+            transition: transform 1s linear 1s;
+            transform: scaleX(1);
+        }
+        p::after {
+            transition: transform 750ms ease-out 2s;
+            transform: rotateZ(-170deg) scaleX(1);
+        }
+    }
+    img.display-cover {
+    transition: opacity 1.5s 2.5s;
+    }
+}
+        
+
+    
+
